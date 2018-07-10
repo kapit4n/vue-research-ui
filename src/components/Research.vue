@@ -1,17 +1,15 @@
 <template>
   <div class="research">
     <md-list class="md-triple-line md-dense">
-      <md-list-item>
+      <md-list-item v-for="data in response">
         <md-avatar>
-          <img src="https://cdn.iconscout.com/public/images/icon/free/png-512/vue-company-brand-logo-344d70cbc2e7278d-512x512.png" alt="People">
+          <img :src="data.imageUrl">
         </md-avatar>
 
         <div class="md-list-item-text">
-          <span>VUE JS RESEARCH</span>
+          <span>{{data.name}}</span>
           <span>research</span>
-          <p>On this research I will see how to discoverOn this research 
-            I will see how to discoverOn this research I will 
-            see how to discoverOn this research I will see how to discover. :(
+          <p>{{data.description}}
           </p>
         </div>
 
@@ -114,8 +112,31 @@
 </template>
 
 <script>
+
+import 'isomorphic-fetch'
+import { Fetch } from 'vue-fetch'
+import Vue from 'vue'
+import VueResource from 'vue-resource'
+Vue.use(VueResource);
+
+const url = "http://localhost:3000/api/research"
+
 export default {
-  name: 'Research'
+  name: 'Research',
+  data() {
+    return {
+      loaded: false,
+      response: [],
+    }
+  },
+  created() {
+    this.$http .get(url )
+      .then(response => response.json())
+      .then(response => {
+        this.response = response
+        this.loaded = true
+      });
+  }
 }
 </script>
 

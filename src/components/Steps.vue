@@ -1,5 +1,6 @@
 <template>
   <div class="steps">
+    <md-list class="md-triple-line md-dense">
       <md-list-item>
         <md-avatar>
           <img src="https://placeimg.com/40/40/people/6" alt="People">
@@ -51,9 +52,7 @@
           <md-icon>star_border</md-icon>
         </md-button>
       </md-list-item>
-    </md-list>
 
-    <md-list class="md-triple-line md-dense">
       <md-list-item>
         <md-avatar>
           <img src="https://placeimg.com/40/40/people/1" alt="People">

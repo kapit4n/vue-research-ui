@@ -8,6 +8,9 @@ import VueMaterial from 'vue-material'
 import 'vue-material/dist/vue-material.min.css'
 import 'vue-material/dist/theme/default.css'
 
+import 'whatwg-fetch'
+import VueFetch from 'vue-fetch'
+
 Vue.config.productionTip = false
 
 const routes = [
@@ -22,6 +25,9 @@ const router = new VueRouter({
 Vue.use(VueResource)
 Vue.use(VueRouter)
 Vue.use(VueMaterial)
+Vue.use(VueFetch, {
+  polyfill: true   //should vue-fetch load promise polyfill, set to false to use customer polyfill
+});
 
 new Vue({
   render: h => h(App),
