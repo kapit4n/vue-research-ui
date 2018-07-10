@@ -1,8 +1,11 @@
 <template>
   <div class="research">
     <p>
-      This is research 
-      <a href="https://cli.vuejs.org" target="_blank">vue-cli documentation</a>.
+      This is research the research list page
+      <a href="https://cli.vuejs.org" target="_blank">Lets show a table here</a>.
+      <table>
+        
+      </table>
     </p>
     <h3></h3>
   </div>
