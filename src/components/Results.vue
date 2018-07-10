@@ -1,128 +1,25 @@
 <template>
   <div class="results">
-      <md-list-item>
-        <md-avatar>
-          <img src="https://placeimg.com/40/40/people/6" alt="People">
-        </md-avatar>
-
-        <div class="md-list-item-text">
-          <span>me, Scott, Jennifer</span>
-          <span>Summer BBQ</span>
-          <p>Wish I could come, but I'm out of town this week. :(</p>
-        </div>
-
-        <md-button class="md-icon-button md-list-action">
-          <md-icon>star_border</md-icon>
-        </md-button>
-      </md-list-item>
-
-      <md-divider class="md-inset"></md-divider>
-
-      <md-list-item>
-        <md-avatar>
-          <img src="https://placeimg.com/40/40/people/5" alt="People">
-        </md-avatar>
-
-        <div class="md-list-item-text">
-          <span>Sandra Adams</span>
-          <span>Oui oui</span>
-          <p>Do you have Paris recommendations? Have you visited good places?</p>
-        </div>
-
-        <md-button class="md-icon-button md-list-action">
-          <md-icon>star_border</md-icon>
-        </md-button>
-      </md-list-item>
-
-      <md-divider class="md-inset"></md-divider>
-
-      <md-list-item>
-        <md-avatar>
-          <img src="https://placeimg.com/40/40/people/8" alt="People">
-        </md-avatar>
-
-        <div class="md-list-item-text">
-          <span>Trevor Hansen</span>
-          <span>Order confirmation</span>
-          <p>Thank you for your recent order from Amazon</p>
-        </div>
-
-        <md-button class="md-icon-button md-list-action">
-          <md-icon>star_border</md-icon>
-        </md-button>
-      </md-list-item>
-    </md-list>
-
     <md-list class="md-triple-line md-dense">
       <md-list-item>
         <md-avatar>
-          <img src="https://placeimg.com/40/40/people/1" alt="People">
+          <img src="https://cdn.iconscout.com/public/images/icon/free/png-512/vue-company-brand-logo-344d70cbc2e7278d-512x512.png" alt="People">
         </md-avatar>
 
         <div class="md-list-item-text">
-          <span>Ali Connors</span>
-          <span>Brunch this weekend?</span>
-          <p>I'll be in your neighborhood doing errands this week. Do you want to meet?</p>
+          <span>ROUTER CONFIGURATIONS</span>
+          <span>vue js research</span>
+          <p> 
+            I see that when we work with vue router it is very easy to add 
+            and the configuration is reduced.
+          </p>
         </div>
-
-        <md-button class="md-icon-button md-list-action">
-          <md-icon class="md-primary">star</md-icon>
-        </md-button>
-      </md-list-item>
-
-      <md-divider class="md-inset"></md-divider>
-
-      <md-list-item>
-        <md-avatar>
-          <img src="https://placeimg.com/40/40/people/6" alt="People">
-        </md-avatar>
-
-        <div class="md-list-item-text">
-          <span>me, Scott, Jennifer</span>
-          <span>Summer BBQ</span>
-          <p>Wish I could come, but I'm out of town this week. :(</p>
-        </div>
-
         <md-button class="md-icon-button md-list-action">
           <md-icon>star_border</md-icon>
         </md-button>
       </md-list-item>
 
       <md-divider class="md-inset"></md-divider>
-
-      <md-list-item>
-        <md-avatar>
-          <img src="https://placeimg.com/40/40/people/5" alt="People">
-        </md-avatar>
-
-        <div class="md-list-item-text">
-          <span>Sandra Adams</span>
-          <span>Oui oui</span>
-          <p>Do you have Paris recommendations? Have you visited good places?</p>
-        </div>
-
-        <md-button class="md-icon-button md-list-action">
-          <md-icon>star_border</md-icon>
-        </md-button>
-      </md-list-item>
-
-      <md-divider class="md-inset"></md-divider>
-
-      <md-list-item>
-        <md-avatar>
-          <img src="https://placeimg.com/40/40/people/8" alt="People">
-        </md-avatar>
-
-        <div class="md-list-item-text">
-          <span>Trevor Hansen</span>
-          <span>Order confirmation</span>
-          <p>Thank you for your recent order from Amazon</p>
-        </div>
-
-        <md-button class="md-icon-button md-list-action">
-          <md-icon>star_border</md-icon>
-        </md-button>
-      </md-list-item>
     </md-list>
   </div>
 </template>
