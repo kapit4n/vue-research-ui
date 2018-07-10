@@ -6,7 +6,7 @@ import HelloWorld from './components/HelloWorld.vue'
 import Research from './components/Research.vue'
 import VueMaterial from 'vue-material'
 import 'vue-material/dist/vue-material.min.css'
-import 'vue-material/dist/theme/black-green-dark.css'
+import 'vue-material/dist/theme/default.css'
 
 Vue.config.productionTip = false
 

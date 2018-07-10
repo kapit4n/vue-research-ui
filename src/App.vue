@@ -5,9 +5,14 @@
         <Research></Research>
       </md-tab>
       <md-tab id="tab-goals" md-label="Goal" md-icon="stars">
+        <Goals></Goals>
       </md-tab>
-      <md-tab id="tab-steps" md-label="Steps" md-icon="chat_bubble"></md-tab>
-      <md-tab id="tab-results" md-label="Results" md-icon="message"></md-tab>
+      <md-tab id="tab-steps" md-label="Steps" md-icon="chat_bubble">
+        <Steps></Steps>
+      </md-tab>
+      <md-tab id="tab-results" md-label="Results" md-icon="message">
+        <Results></Results>
+      </md-tab>
     </md-tabs>
 
   </div>
@@ -16,11 +21,17 @@
 <script>
 
 import Research from './components/Research'
+import Goals from './components/Goals'
+import Steps from './components/Steps'
+import Results from './components/Results'
 
 export default {
   name: 'app',
   components: {
-    Research
+    Research,
+    Goals,
+    Steps,
+    Results
   }
 }
 </script>
