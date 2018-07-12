@@ -14,7 +14,6 @@
             see how to discoverOn this research I will see how to discover. :(
           </p>
         </div>
-
         <md-button class="md-icon-button md-list-action">
           <md-icon>star_border</md-icon>
         </md-button>
@@ -35,7 +34,7 @@
           </md-card-header>
 
           <md-card-actions>
-            <md-button>Finish</md-button>
+            <md-button>Completed</md-button>
           </md-card-actions>
         </md-card>
 

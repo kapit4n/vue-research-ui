@@ -13,6 +13,9 @@
           </p>
         </div>
 
+        <md-badge class="md-primary md-square" md-content="Started"/> <!-- Badge for status -->
+        <md-badge class="md-primary" md-content="6" /> <!-- Goals -->
+        <md-badge class="" md-content="8" /> <!-- Steps -->
         <md-button class="md-icon-button md-list-action">
           <md-icon>star_border</md-icon>
         </md-button>
@@ -28,6 +31,12 @@
               <img :src="data.imageUrl" alt="Avatar">
             </md-card-media>
           </md-card-header>
+
+          <md-card-content>
+            Started <br>
+            6 Goals <br>
+            8 Steps <br>
+          </md-card-content>
 
           <md-card-actions>
             <md-button>Start</md-button>
