@@ -130,7 +130,7 @@ export default {
     }
   },
   created() {
-    this.$http .get(url )
+    this.$http.get(url )
       .then(response => response.json())
       .then(response => {
         this.response = response

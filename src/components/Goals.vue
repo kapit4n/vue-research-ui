@@ -1,14 +1,14 @@
 <template>
   <div class="goals">
     <md-list class="md-triple-line md-dense">
-      <md-list-item>
+      <md-list-item v-for="data in response">
         <md-avatar>
-          <img src="https://cdn.iconscout.com/public/images/icon/free/png-512/vue-company-brand-logo-344d70cbc2e7278d-512x512.png" alt="People">
+          <img :src="data.imageUrl" alt="People">
         </md-avatar>
 
         <div class="md-list-item-text">
-          <span>HOW WORKS VUE ROUTER</span>
-          <span>vue js research</span>
+          <span>{{data.name}}</span>
+          <span>{{data.research.name}}</span>
           <p>On this research I will see how to discoverOn this research 
             I will see how to discoverOn this research I will 
             see how to discoverOn this research I will see how to discover. :(
@@ -169,8 +169,25 @@
 </template>
 
 <script>
+
+const url = "http://localhost:3000/api/ResearchGoals?filter[include]=research"
+
 export default {
-  name: 'Research'
+  name: 'Goals',
+  data() {
+    return {
+      loaded: false,
+      response: [],
+    }
+  },
+  created() {
+    this.$http.get(url )
+      .then(response => response.json())
+      .then(response => {
+        this.response = response
+        this.loaded = true
+      });
+  }
 }
 </script>
 
