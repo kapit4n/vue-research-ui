@@ -21,6 +21,9 @@
 
         <md-card slot="md-expand" class="md-primary" md-theme="green-card">
           <md-card-header>
+            <md-avatar>
+              <img :src="data.research.imageUrl" alt="People">
+            </md-avatar>
             <md-card-header-text>
               <div class="md-title">{{data.name}}</div>
               <div class="md-subhead">{{data.research.name}}</div>
