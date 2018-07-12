@@ -1,7 +1,7 @@
 <template>
   <div class="goals">
     <md-list class="md-triple-line md-dense">
-      <md-list-item v-for="data in response">
+      <md-list-item v-for="data in response" md-expand>
         <md-avatar>
           <img :src="data.imageUrl" alt="People">
         </md-avatar>
@@ -18,6 +18,24 @@
         <md-button class="md-icon-button md-list-action">
           <md-icon>star_border</md-icon>
         </md-button>
+
+        <md-card slot="md-expand" class="md-primary" md-theme="green-card">
+          <md-card-header>
+            <md-card-header-text>
+              <div class="md-title">{{data.name}}</div>
+              <div class="md-subhead">{{data.research.name}}</div>
+            </md-card-header-text>
+
+            <md-card-media>
+              <img :src="data.imageUrl" alt="Avatar">
+            </md-card-media>
+          </md-card-header>
+
+          <md-card-actions>
+            <md-button>Finish</md-button>
+          </md-card-actions>
+        </md-card>
+
       </md-list-item>
 
       <md-divider class="md-inset"></md-divider>

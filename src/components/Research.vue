@@ -1,7 +1,7 @@
 <template>
   <div class="research">
     <md-list class="md-triple-line md-dense">
-      <md-list-item v-for="data in response">
+      <md-list-item md-expand v-for="data in response">
         <md-avatar>
           <img :src="data.imageUrl">
         </md-avatar>
@@ -16,6 +16,26 @@
         <md-button class="md-icon-button md-list-action">
           <md-icon>star_border</md-icon>
         </md-button>
+
+        <md-card slot="md-expand" class="md-primary">
+          <md-card-header>
+            <md-card-header-text>
+              <div class="md-title">{{data.name}}</div>
+              <div class="md-subhead">{{data.description}}</div>
+            </md-card-header-text>
+
+            <md-card-media>
+              <img :src="data.imageUrl" alt="Avatar">
+            </md-card-media>
+          </md-card-header>
+
+          <md-card-actions>
+            <md-button>Start</md-button>
+            <md-button>Finish</md-button>
+          </md-card-actions>
+        </md-card>
+
+
       </md-list-item>
 
       <md-divider class="md-inset"></md-divider>
@@ -112,32 +132,32 @@
 </template>
 
 <script>
-
-import 'isomorphic-fetch'
-import { Fetch } from 'vue-fetch'
-import Vue from 'vue'
-import VueResource from 'vue-resource'
+import "isomorphic-fetch";
+import { Fetch } from "vue-fetch";
+import Vue from "vue";
+import VueResource from "vue-resource";
 Vue.use(VueResource);
 
-const url = "http://localhost:3000/api/research"
+const url = "http://localhost:3000/api/research";
 
 export default {
-  name: 'Research',
+  name: "Research",
   data() {
     return {
       loaded: false,
-      response: [],
-    }
+      response: []
+    };
   },
   created() {
-    this.$http.get(url )
+    this.$http
+      .get(url)
       .then(response => response.json())
       .then(response => {
-        this.response = response
-        this.loaded = true
+        this.response = response;
+        this.loaded = true;
       });
   }
-}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
