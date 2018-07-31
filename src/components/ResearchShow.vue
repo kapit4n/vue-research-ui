@@ -42,7 +42,7 @@
 
 <script>
 
-const url = "http://localhost:3000/api/Research?filter[include]=research"
+const url = "http://localhost:3000/api/Research"
 const urlGoals = "http://localhost:3000/api/ResearchGoals"
 
 export default {
@@ -55,18 +55,17 @@ export default {
     }
   },
   created() {
-    
     this.$http.get(url)
       .then(response => response.json())
       .then(research => {
-        this.research = response
-        this.loaded = true
-      });
-    this.$http.get(url)
-      .then(response => response.json())
-      .then(response => {
-        this.goals = response
-        this.loaded = true
+        this.research = research
+        this.loaded = true;
+        this.$http.get(`${urlGoals}?filter[where][researchId]=${research[0].id}`)
+        .then(response => response.json())
+        .then(goals => {
+          this.goals = goals
+          this.loaded = true
+        });
       });
   }
 }

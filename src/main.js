@@ -4,6 +4,7 @@ import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
 import HelloWorld from './components/HelloWorld.vue'
 import Research from './components/Research.vue'
+import ResearchShow from './components/ResearchShow.vue'
 import VueMaterial from 'vue-material'
 import 'vue-material/dist/vue-material.min.css'
 import 'vue-material/dist/theme/default.css'
@@ -15,7 +16,8 @@ Vue.config.productionTip = false
 
 const routes = [
   { path: '/', component: HelloWorld },
-  { path: '/research', component: Research }
+  { path: '/research', component: Research },
+  { path: '/research-show', component: ResearchShow }
 ]
 
 const router = new VueRouter({

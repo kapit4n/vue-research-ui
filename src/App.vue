@@ -13,6 +13,9 @@
       <md-tab id="tab-results" md-label="Results" md-icon="message">
         <Results></Results>
       </md-tab>
+      <md-tab id="tab-research-show" md-label="ResearchShow" md-icon="message">
+        <ResearchShow></ResearchShow>
+      </md-tab>
     </md-tabs>
 
   </div>
@@ -24,6 +27,7 @@ import Research from './components/Research'
 import Goals from './components/Goals'
 import Steps from './components/Steps'
 import Results from './components/Results'
+import ResearchShow from './components/ResearchShow'
 
 export default {
   name: 'app',
@@ -31,7 +35,8 @@ export default {
     Research,
     Goals,
     Steps,
-    Results
+    Results,
+    ResearchShow
   }
 }
 </script>
