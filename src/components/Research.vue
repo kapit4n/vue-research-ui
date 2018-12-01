@@ -1,15 +1,15 @@
 <template>
   <div class="research">
     <md-list class="md-triple-line md-dense">
-      <md-list-item md-expand v-for="data in response">
+      <md-list-item md-expand v-for="item in items">
         <md-avatar>
-          <img :src="data.imageUrl">
+          <img :src="item.imageUrl">
         </md-avatar>
 
         <div class="md-list-item-text">
-          <span>{{data.name}}</span>
+          <span>{{item.name}}</span>
           <span>research</span>
-          <p>{{data.description}}</p>
+          <p>{{item.description}}</p>
         </div>
 
         <md-badge class="md-primary md-square" md-content="Started"/>
@@ -25,12 +25,12 @@
         <md-card slot="md-expand" class="md-primary">
           <md-card-header>
             <md-card-header-text>
-              <div class="md-title">{{data.name}}</div>
-              <div class="md-subhead">{{data.description}}</div>
+              <div class="md-title">{{item.name}}</div>
+              <div class="md-subhead">{{item.description}}</div>
             </md-card-header-text>
 
             <md-card-media>
-              <img :src="data.imageUrl" alt="Avatar">
+              <img :src="item.imageUrl" alt="Avatar">
             </md-card-media>
           </md-card-header>
 
@@ -59,6 +59,7 @@ import Vue from "vue";
 import VueResource from "vue-resource";
 Vue.use(VueResource);
 
+// ?filter[include]=goals?filter[include]=steps
 const url = "http://localhost:3000/api/research";
 
 export default {
@@ -66,7 +67,7 @@ export default {
   data() {
     return {
       loaded: false,
-      response: []
+      items: []
     };
   },
   created() {
@@ -74,7 +75,7 @@ export default {
       .get(url)
       .then(response => response.json())
       .then(response => {
-        this.response = response;
+        this.items = response;
         this.loaded = true;
       });
   }

@@ -1,14 +1,13 @@
 <template>
   <div class="goals">
     <md-list class="md-triple-line md-dense">
-      <md-list-item v-for="data in response" md-expand>
+      <md-list-item v-for="goal in goals" md-expand>
         <md-avatar>
-          <img :src="data.imageUrl" alt="People">
+          <img :src="goal.imageUrl" alt="People">
         </md-avatar>
-
         <div class="md-list-item-text">
-          <span>{{data.name}}</span>
-          <span>{{data.research.name}}</span>
+          <span>{{goal.name}}</span>
+          <span>{{goal.research.name}}</span>
           <p>
             On this research I will see how to discoverOn this research
             I will see how to discoverOn this research I will
@@ -22,15 +21,15 @@
         <md-card slot="md-expand" class="md-primary" md-theme="green-card">
           <md-card-header>
             <md-avatar>
-              <img :src="data.research.imageUrl" alt="People">
+              <img :src="goal.research.imageUrl" alt="People">
             </md-avatar>
             <md-card-header-text>
-              <div class="md-title">{{data.name}}</div>
-              <div class="md-subhead">{{data.research.name}}</div>
+              <div class="md-title">{{goal.name}}</div>
+              <div class="md-subhead">{{goal.research.name}}</div>
             </md-card-header-text>
 
             <md-card-media>
-              <img :src="data.imageUrl" alt="Avatar">
+              <img :src="goal.imageUrl" alt="Avatar">
             </md-card-media>
           </md-card-header>
 
@@ -51,7 +50,7 @@ export default {
   data() {
     return {
       loaded: false,
-      response: []
+      goals: []
     };
   },
   created() {
@@ -59,7 +58,7 @@ export default {
       .get(url)
       .then(response => response.json())
       .then(response => {
-        this.response = response;
+        this.goals = response;
         this.loaded = true;
       });
   }
