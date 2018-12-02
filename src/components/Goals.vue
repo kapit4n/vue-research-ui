@@ -27,7 +27,6 @@
               <div class="md-title">{{goal.name}}</div>
               <div class="md-subhead">{{goal.research.name}}</div>
             </md-card-header-text>
-
             <md-card-media>
               <img :src="goal.imageUrl" alt="Avatar">
             </md-card-media>

@@ -35,7 +35,8 @@
           </md-card-header>
 
           <md-card-content>Started
-            <br>6 Goals
+            <br>
+            {{item.researchGoals.length}} Goals
             <br>8 Steps
             <br>
           </md-card-content>
@@ -60,7 +61,7 @@ import VueResource from "vue-resource";
 Vue.use(VueResource);
 
 // ?filter[include]=goals?filter[include]=steps
-const url = "http://localhost:3000/api/research";
+const url = "http://localhost:3000/api/research?filter[include]=researchGoals";
 
 export default {
   name: "Research",
