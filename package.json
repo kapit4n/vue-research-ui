@@ -15,7 +15,7 @@
     "vue-resource": "^1.5.1",
     "vue-router": "^3.0.1",
     "whatwg-fetch": "^2.0.4",
-    "yarn": "^1.12.3"
+    "yarn": "^1.22.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.0-beta.15",
